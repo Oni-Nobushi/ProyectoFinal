@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineFlix</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- OWL CAROUSEL -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" />
+  <!-- BOX ICONS -->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/responsive.css">
+</head>
+
+<body>
+
+
+
+
+
+
+
+  <!--- #HEADER SECTION-->
+
+
+
+  <body class="container">
+
+    <!-- ===== START HEADER ===== -->
+
+
+    <!-- Header Main-->
+    <header class="header">
+
+      <div class="header-container">
+        <div href="./index.html" class="logo">
+          <i class='bx bxs-camera-movie bx-tada logo-color'></i>Cine<span class="">Flix</span>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light desktop-navigation-menu">
+
+
+
+          <div class="collapse navbar-collapse container" id="navbarContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 desktop-menu-category-list">
+              <li class="nav-item menu-category">
+                <a href="index.html" class="nav-link menu-title">Home</a>
+              </li>
+
+              <li class="nav-item menu-category">
+                <a href="#" class="nav-link menu-title">Movies</a>
+
+
+              </li>
+
+              <li class="nav-item menu-category">
+                <a href="#" class="nav-link menu-title">TV Series</a>
+
+
+              </li>
+
+              <li class="nav-item menu-category">
+                <a href="contact.html" class="nav-link menu-title">Contact</a>
+
+
+              </li>
+
+
+
+
+
+              <li class="nav-item menu-category">
+                <a href="#" class="nav-link menu-title">Category</a>
+              </li>
+
+
+            </ul>
+
+            <div class="d-flex align-items-center header-user-actions">
+              <div class="btn btn-link action-btn" id="search-btn">
+                <i class='bx bx-search'></i>
+
+              </div>
+              <div class=" btn btn-link action-btn" id="login-btn">
+                <i class='bx bxs-user'></i>
+
+              </div>
+              <div class="btn btn-link position-relative action-btn" id="width-list">
+                <i class='bx bxs-heart'></i>
+                <span class="badge position-absolute start-100 translate-middle count quantity">0</span>
+              </div>
+
+
+
+            </div>
+
+          </div>
+
+        </nav>
+
+        <div class="btn btn-link position-relative menu-btn" id="menu-btn">
+          <i class="bx bx-menu"></i>
+        </div>
+      </div>
+
+      <!-- Menú Móvil -->
+
+      <nav class="mobile-menu" id="mobileMenu">
+        <div class="menu-close" id="menuClose">
+          <i class="bx bx-x"></i>
+        </div>
+        <ul class="mobile-menu-list">
+          <li><a href="index.html" class="mobile-menu-link">Home</a></li>
+          <li><a href="#" class="mobile-menu-link">Movies</a></li>
+          <li><a href="#" class="mobile-menu-link">TV Series</a></li>
+          <li><a href="contact.html" class="mobile-menu-link">Contact</a></li>
+          <li><a href="#" class="mobile-menu-link">Category</a></li>
+        </ul>
+        <div class=" mobile-user-actions">
+          <div class="action-btn" id="search-btn">
+            <i class='bx bx-search'></i>
+
+          </div>
+          <div class="  action-btn" id="login-btn">
+            <i class='bx bxs-user'></i>
+
+          </div>
+          <div class=" action-btn" id="width-list">
+            <i class='bx bxs-heart'></i>
+            <span class="badge position-absolute start-100 translate-middle count quantity">0</span>
+          </div>
+
+
+
+        </div>
+      </nav>
+
+
+
+      <!--Cart-->
+      <div class="card">
+        <h1 class="card-title">Widthlist</h1>
+
+        <!--Cart content-->
+        <ul class="listCard">
+        </ul>
+        <div class="width-quantity">
+          <div class="total btn-2"> 0 </div>
+          <div class="list-close btn-2">Close</div>
+        </div>
+      </div>
+      <!--Search-->
+      <form class="search-form">
+        <input type="search" id="search-box" placeholder="Search here....">
+        <label for="search-box" class="fas fa-search"></label>
+      </form>
+      <!--Login-->
+      <form action="#" class="login-form" id="loginForm">
+        <h3>Login</h3>
+        <input type="email" placeholder="Email registrado" class="box" id="email" required>
+        <input type="password" placeholder="Contraseña" class="box" id="password" required>
+        <p>¿No estas registrado/a? <a href="pages/register.html">Crea tu cuenta</a></p>
+        <input type="submit" value="Login" class=" btn-2">
+        <p id="errorMsg"></p>
+      </form>
+    </header>
+
+
+
+    <!--- MAIN SECTION-->
+    <main>
+
+      <!-- ===== BANNER ===== -->
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="hero">
+        <div class="container">
+          <div class="overlay" data-overlay></div>
+          <div class="hero-content">
+
+            <p class="hero-subtitle">Cine<span>Flix</span></p>
+
+            <h1 class="h1 hero-title">
+              Unlimited <strong>Movie</strong>, TVs Shows, & More.
+            </h1>
+
+            <div class="meta-wrapper">
+
+              <div class="badge-wrapper">
+                <div class="badge badge-fill">PG 18</div>
+
+                <div class="badge badge-outline">HD</div>
+              </div>
+
+              <div class="ganre-wrapper">
+                <a href="#">Accion,</a>
+
+                <a href="#">Drama</a>
+              </div>
+
+              <div class="date-time">
+
+                <div>
+                  <i class='bx bx-calendar'></i>
+
+                  <time datetime="2022">2022</time>
+                </div>
+
+                <div>
+                  <i class='bx bx-timer'></i>
+
+                  <time datetime="PT128M">128 min</time>
+                </div>
+
+              </div>
+
+            </div>
+
+            <button class="btn-1">
+              <i class='bx bx-play'></i>
+
+              <span>Watch now</span>
+            </button>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!--- #MOVIES SECTION-->
+      <section class="movies">
+        <div class="filter-bar">
+          <div class="filter-dropdowns">
+            <select name="genre" class="genre">
+              <option value="all genres">All genres</option>
+              <option value="action">Action</option>
+              <option value="adventure">Adventure</option>
+              <option value="animal">Animal</option>
+              <option value="animation">Animation</option>
+              <option value="biography">Biography</option>
+            </select>
+            <select name="year" class="year">
+              <option value="all years">All the years</option>
+              <option value="2022">2022</option>
+              <option value="2020-2021">2020-2021</option>
+              <option value="2010-2019">2010-2019</option>
+              <option value="2000-2009">2000-2009</option>
+              <option value="1980-1999">1980-1999</option>
+            </select>
+          </div>
+          <div class="filter-radios">
+            <input type="radio" name="grade" id="featured" checked>
+            <label for="featured">Featured</label>
+            <input type="radio" name="grade" id="popular">
+            <label for="popular">Popular</label>
+            <input type="radio" name="grade" id="newest">
+            <label for="newest">Newest</label>
+            <div class="checked-radio-bg"></div>
+          </div>
+        </div>
+        <h2 class="section-heading">Movies</h2>
+        <div class="movies-grid" id="moviesGrid">
+
+
+        </div>
+        <button class="load-more">LOAD MORE</button>
+      </section>
+      <span><i class='bx bxs-heart'></i></span>
+      <!--- #CATEGORY SECTION-->
+      <section class="category" id="category">
+
+        <h2 class="section-heading">Category</h2>
+
+        <div class="category-grid">
+
+          <div class="category-card">
+            <img src="./assets/img/home/action.jpg" alt="" class="card-img">
+            <div class="name">Action</div>
+            <div class="total">100</div>
+          </div>
+
+          <div class="category-card">
+            <img src="./assets/img/home/comedy.jpg" alt="" class="card-img">
+            <div class="name">Comedy</div>
+            <div class="total">50</div>
+          </div>
+
+          <div class="category-card">
+            <img src="./assets/img/home/thriller.webp" alt="" class="card-img">
+            <div class="name">Thriller</div>
+            <div class="total">20</div>
+          </div>
+
+          <div class="category-card">
+            <img src="./assets/img/home/horror.jpg" alt="" class="card-img">
+            <div class="name">Horror</div>
+            <div class="total">80</div>
+          </div>
+
+          <div class="category-card">
+            <img src="./assets/img/home/adventure.jpg" alt="" class="card-img">
+            <div class="name">Adventure</div>
+            <div class="total">100</div>
+          </div>
+
+          <div class="category-card">
+            <img src="./assets/img/home/animated.jpg" alt="" class="card-img">
+            <div class="name">Animated</div>
+            <div class="total">50</div>
+          </div>
+
+          <div class="category-card">
+            <img src="./assets/img/home/crime.jpg" alt="" class="card-img">
+            <div class="name">Crime</div>
+            <div class="total">20</div>
+          </div>
+
+          <div class="category-card">
+            <img src="./assets/img/home/sci-fi.jpg" alt="" class="card-img">
+            <div class="name">SCI-FI</div>
+            <div class="total">80</div>
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+
+
+      <!--
+          - #LIVE SECTION
+        -->
+      <section class="live" id="live">
+
+        <h2 class="section-heading">Live Tv Shows</h2>
+
+        <div class="live-grid">
+
+          <div class="live-card">
+
+            <div class="card-head">
+              <img src="./assets/img/home/planet.jpg" alt="" class="card-img">
+              <div class="live-badge">LIVE</div>
+              <div class="total-viewers">305K viewers</div>
+              <div class="play">
+                <i class='bx bx-play-circle'></i>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <img src="./assets/img/home/bbcamerica.jpg" alt="" class="avatar">
+              <h3 class="card-title">Planet Earth II <br> Season 1 - Islands</h3>
+            </div>
+
+          </div>
+
+          <div class="live-card">
+
+            <div class="card-head">
+              <img src="./assets/img/home/got.jpg" alt="" class="card-img">
+              <div class="live-badge">LIVE</div>
+              <div class="total-viewers">1.7M viewers</div>
+              <div class="play">
+                <i class='bx bx-play-circle'></i>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <img src="./assets/img/home/HBO-Logo-square.jpg" alt="" class="avatar">
+              <h3 class="card-title">Game of Thrones <br> Season 5 - Mother's Mercy</h3>
+            </div>
+
+          </div>
+
+          <div class="live-card">
+
+            <div class="card-head">
+              <img src="./assets/img/home/vikins.jpg" alt="" class="card-img">
+              <div class="live-badge">LIVE</div>
+              <div class="total-viewers">468K viewers</div>
+              <div class="play">
+                <i class='bx bx-play-circle'></i>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <img src="/assets/img/home/HBO-Logo-square.jpg" alt="" class="avatar">
+              <h3 class="card-title">Vikings <br> Season 4 - What Might Have Been</h3>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!---------- start TESTIMONIOS ---------->
+
+      <section class="review">
+        <h2 class="section-heading">Review</h2>
+
+        <div class=" review-grid">
+
+          <div class="review-box">
+
+            <img src="./assets/img/reseña/testimonial-4.png" alt="">
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo hic quasi sint, neque
+              possimus adipisci quae vel a debitis accusamus!</p>
+
+            <h3>Jhon Doe</h3>
+            <div class="stars">
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star-half'></i>
+            </div>
+          </div>
+          <div class="review-box">
+            <img src="./assets/img/reseña/testimonial-3.png" alt="">
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo hic quasi sint, neque
+              possimus adipisci quae vel a debitis accusamus!</p>
+
+            <h3>Jhon Doe</h3>
+            <div class="stars">
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star-half'></i>
+            </div>
+
+          </div>
+          <div class="review-box">
+            <img src="./assets/img/reseña/testimonial-1.jpg" alt="">
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo hic quasi sint, neque
+              possimus adipisci quae vel a debitis accusamus!</p>
+
+            <h3>Jhon Doe</h3>
+            <div class="stars">
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star-half'></i>
+            </div>
+          </div>
+
+
+
+
+
+
+
+        </div>
+      </section>
+      <!---------- end TESTIMONIOS ---------->
+
+      <!---------- Publicidad ---------->
+      <aside id="publicity" class="aside">
+        <p class="textPublicity">Publicidad</p>
+      </aside>
+      <!---------- end Publicidad ---------->
+    </main>
+
+
+
+
+
+    <!-- FOOTER SECTION -->
+    <footer>
+
+      <div class="footer-content">
+
+        <div class="footer-brand">
+          <!-- Logo -->
+          <a class="navbar-brand " href="index.html">
+            <i class='bx bxs-camera-movie bx-tada logo-color'></i> Cine<span>Flix</span>
+          </a>
+          <p class="slogan">Movies & TV Shows, Online cinema,
+            Movie database HTML Template.</p>
+
+
+          <div class="social-link">
+
+
+            <a href="#" class="navbar-social-link">
+              <i class='bx bxl-twitter'></i>
+            </a>
+
+
+
+            <a href="#" class="navbar-social-link">
+              <i class='bx bxl-facebook'></i>
+            </a>
+
+
+
+
+
+            <a href="#" class="navbar-social-link">
+              <i class='bx bxl-instagram'></i>
+            </a>
+
+
+          </div>
+        </div>
+
+
+        <div class="footer-links">
+          <ul>
+
+            <h4 class="link-heading">CineFlix</h4>
+
+            <li class="link-item"><a href="#">About us</a></li>
+            <li class="link-item"><a href="#">My profile</a></li>
+            <li class="link-item"><a href="#">Pricing plans</a></li>
+            <li class="link-item"><a href="#">Contacts</a></li>
+
+          </ul>
+
+          <ul>
+
+            <h4 class="link-heading">Browse</h4>
+
+            <li class="link-item"><a href="#">Live Tv</a></li>
+            <li class="link-item"><a href="#">Live News</a></li>
+            <li class="link-item"><a href="#">Live Sports</a></li>
+            <li class="link-item"><a href="#">Streaming Library</a></li>
+
+          </ul>
+
+          <ul>
+
+            <li class="link-item"><a href="#">TV Shows</a></li>
+            <li class="link-item"><a href="#">Movies</a></li>
+            <li class="link-item"><a href="#">Kids</a></li>
+            <li class="link-item"><a href="#">Collections</a></li>
+
+          </ul>
+
+          <ul>
+
+            <h4 class="link-heading">Help</h4>
+
+            <li class="link-item"><a href="#">Account & Billing</a></li>
+            <li class="link-item"><a href="#">Plans & Pricing</a></li>
+            <li class="link-item"><a href="#">Supported devices</a></li>
+            <li class="link-item"><a href="#">Accessibility</a></li>
+
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-copyright">
+
+        <div class="copyright">
+          <p>&copy; copyright 2021 CineFlix</p>
+        </div>
+
+        <div class="wrapper">
+          <a href="#">Privacy policy</a>
+          <a href="#">Terms and conditions</a>
+        </div>
+
+      </div>
+
+
+    </footer>
+
+
+
+
+    <!-- Vincular script.js -->
+    <script src="./assets/js/script.js"></script>
+    <!-- API -->
+    <script src="./assets/js/api.js"></script>
+    <!--- custom js link-->
+    <script src="./assets/js/pelis.js"></script>
+    <script src="./assets/js/menu.js"></script>
+    <script src="./assets/js/login_search.js"></script>
+  </body>
+
+</html>
