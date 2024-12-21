@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineFlix</title>
+  
+  <!-- Preload Image for loading -->
+  <link rel="preload" href="https://formspree.io/static/img/loading.svg?t=1733229893" as="image">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- OWL CAROUSEL -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" />
+  <!-- BOX ICONS -->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body class="container">
+
+   <!-- ===== START HEADER ===== -->
+
+
+    <!-- Header Main-->
+    <header class="header">
+
+      <div class="header-container">
+        <div href="./index.html" class="logo">
+          <i class='bx bxs-camera-movie bx-tada logo-color'></i>Cine<span class="">Flix</span>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light desktop-navigation-menu">
+
+
+
+          <div class="collapse navbar-collapse container" id="navbarContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 desktop-menu-category-list">
+              <li class="nav-item menu-category">
+                <a href="index.html" class="nav-link menu-title">Home</a>
+              </li>
+
+              <li class="nav-item menu-category">
+                <a href="#" class="nav-link menu-title">Movies</a>
+
+
+              </li>
+
+              <li class="nav-item menu-category">
+                <a href="#" class="nav-link menu-title">TV Series</a>
+
+
+              </li>
+
+              <li class="nav-item menu-category">
+                <a href="contact.html" class="nav-link menu-title">Contact</a>
+
+
+              </li>
+
+
+
+
+
+              <li class="nav-item menu-category">
+                <a href="#" class="nav-link menu-title">Category</a>
+              </li>
+
+
+            </ul>
+
+            <div class="d-flex align-items-center header-user-actions">
+              <div class="btn btn-link action-btn" id="search-btn">
+                <i class='bx bx-search'></i>
+
+              </div>
+              <div class=" btn btn-link action-btn" id="login-btn">
+                <i class='bx bxs-user'></i>
+
+              </div>
+              <div class="btn btn-link position-relative action-btn" id="width-list">
+                <i class='bx bxs-heart'></i>
+                <span class="badge position-absolute start-100 translate-middle count quantity">0</span>
+              </div>
+
+
+
+            </div>
+
+          </div>
+
+        </nav>
+
+        <div class="btn btn-link position-relative menu-btn" id="menu-btn">
+          <i class="bx bx-menu"></i>
+        </div>
+      </div>
+
+      <!-- Menú Móvil -->
+
+      <nav class="mobile-menu" id="mobileMenu">
+        <div class="menu-close" id="menuClose">
+          <i class="bx bx-x"></i>
+        </div>
+        <ul class="mobile-menu-list">
+          <li><a href="index.html" class="mobile-menu-link">Home</a></li>
+          <li><a href="#" class="mobile-menu-link">Movies</a></li>
+          <li><a href="#" class="mobile-menu-link">TV Series</a></li>
+          <li><a href="contact.html" class="mobile-menu-link">Contact</a></li>
+          <li><a href="#" class="mobile-menu-link">Category</a></li>
+        </ul>
+        <div class=" mobile-user-actions">
+          <div class="action-btn" id="search-btn">
+            <i class='bx bx-search'></i>
+
+          </div>
+          <div class="  action-btn" id="login-btn">
+            <i class='bx bxs-user'></i>
+
+          </div>
+          <div class=" action-btn" id="width-list">
+            <i class='bx bxs-heart'></i>
+            <span class="badge position-absolute start-100 translate-middle count quantity">0</span>
+          </div>
+
+
+
+        </div>
+      </nav>
+
+
+
+      <!--Cart-->
+      <div class="card">
+        <h1 class="card-title">Widthlist</h1>
+
+        <!--Cart content-->
+        <ul class="listCard">
+        </ul>
+        <div class="width-quantity">
+          <div class="total btn-2"> 0 </div>
+          <div class="list-close btn-2">Close</div>
+        </div>
+      </div>
+      <!--Search-->
+      <form class="search-form">
+        <input type="search" id="search-box" placeholder="Search here....">
+        <label for="search-box" class="fas fa-search"></label>
+      </form>
+      <!--Login-->
+      <form action="#" class="login-form" id="loginForm">
+        <h3>Login</h3>
+        <input type="email" placeholder="Email registrado" class="box" id="email" required>
+        <input type="password" placeholder="Contraseña" class="box" id="password" required>
+        <p>¿No estas registrado/a? <a href="pages/register.html">Crea tu cuenta</a></p>
+        <input type="submit" value="Login" class=" btn-2">
+        <p id="errorMsg"></p>
+      </form>
+    </header>
+
+  <main>
+    <!-- Formulario de Consulta -->
+    <div class="container mt-5">
+      <h2 class="text-center">Formulario de Consulta</h2>
+      <form action="https://formspree.io/f/mnnqjzbd" method="POST">
+        <!-- Nombre -->
+        <div class="mb-3">
+          <label for="name" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Ingresa tu nombre" required>
+        </div>
+
+        <!-- Correo Electrónico -->
+        <div class="mb-3">
+          <label for="email" class="form-label">Correo Electrónico</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Ingresa tu correo" required>
+        </div>
+
+        <!-- Asunto -->
+        <div class="mb-3">
+          <label for="subject" class="form-label">Asunto</label>
+          <input type="text" class="form-control" id="subject" name="subject" placeholder="Asunto de la consulta" required>
+        </div>
+
+        <!-- Mensaje -->
+        <div class="mb-3">
+          <label for="message" class="form-label">Mensaje</label>
+          <textarea class="form-control" id="message" name="message" rows="4" placeholder="Escribe tu consulta aquí" required></textarea>
+        </div>
+
+        <!-- Botón de Enviar -->
+        <button type="submit" class="btn btn-primary">Enviar Consulta</button>
+      </form>
+    </div>
+  </main>
+  <!-- ===== FOOTER ===== -->
+  <footer>
+
+    <div class="footer-content">
+
+      <div class="footer-brand">
+        <div href="./index.html" class="logo">
+          <i class='bx bxs-camera-movie bx-tada logo-color'></i>Cine<span class="">Flix</span>
+        </div>
+        <p class="slogan">Movies & TV Shows, Online cinema,
+          Movie database HTML Template.</p>
+
+
+        <div class="social-link">
+
+          <a href="#">
+            <i class="bx bxl-facebook"></i>
+          </a>
+          <a href="#">
+            <i class="bx bxl-twitter"></i>
+          
+          </a>
+          <a href="#">
+            <i class="bx bxl-instagram"></i>
+            
+          </a>
+        
+         
+
+        </div>
+      </div>
+
+
+      <div class="footer-links">
+        <ul>
+
+          <h4 class="link-heading">CineFlix</h4>
+
+          <li class="link-item"><a href="#">About us</a></li>
+          <li class="link-item"><a href="#">My profile</a></li>
+          <li class="link-item"><a href="#">Pricing plans</a></li>
+          <li class="link-item"><a href="#">Contacts</a></li>
+
+        </ul>
+
+        <ul>
+
+          <h4 class="link-heading">Browser</h4>
+
+          <li class="link-item"><a href="#">Live Tv</a></li>
+          <li class="link-item"><a href="#">Live News</a></li>
+          <li class="link-item"><a href="#">Live Sports</a></li>
+          <li class="link-item"><a href="#">Streaming Library</a></li>
+
+        </ul>
+
+        <ul>
+
+          <li class="link-item"><a href="#">TV Shows</a></li>
+          <li class="link-item"><a href="#">Movies</a></li>
+          <li class="link-item"><a href="#">Kids</a></li>
+          <li class="link-item"><a href="#">Collections</a></li>
+
+        </ul>
+
+        <ul>
+
+          <h4 class="link-heading">Help</h4>
+
+          <li class="link-item"><a href="#">Account & Billing</a></li>
+          <li class="link-item"><a href="#">Plans & Pricing</a></li>
+          <li class="link-item"><a href="#">Supported devices</a></li>
+          <li class="link-item"><a href="#">Accessibility</a></li>
+
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-copyright">
+
+      <div class="copyright">
+        <p>&copy; copyright 2024 CineFlix</p>
+      </div>
+
+      <div class="wrapper">
+        <a href="#">Privacy politicy</a>
+        <a href="#">Terms and conditions</a>
+      </div>
+
+    </div>
+
+  </footer>
+  <!-- ===== END FOOTER===== -->
+  
+</body>
+</html>
